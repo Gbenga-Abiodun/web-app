@@ -5,8 +5,10 @@ class NotFoundPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Not Found Page"),
+    return Scaffold(
+      body: Center(
+        child: Text("Not Found Page"),
+      ),
     );
   }
 }

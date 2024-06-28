@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_app/components/navigation_drawer/drawer_item.dart';
 import 'package:web_app/components/navigation_drawer/navigation_drawer_header.dart';
-import 'package:web_app/routes/route_names.dart';
+import 'package:web_app/routes/route_helper.dart';
 
 class CustomNavigationDrawer extends StatelessWidget {
   const CustomNavigationDrawer({Key? key}) : super(key: key);
@@ -25,12 +25,12 @@ class CustomNavigationDrawer extends StatelessWidget {
           DrawerItem(
             title: "Episodes",
             icon: Icons.video_camera_back,
-            navigatorPath: episodeRoute,
+            navigatorPath: AppRoutes.episodeRoute,
           ),
           DrawerItem(
             title: "Help",
             icon: Icons.help,
-            navigatorPath: aboutRoute,
+            navigatorPath: AppRoutes.aboutRoute,
           ),
         ],
       ),

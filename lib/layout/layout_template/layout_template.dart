@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:web_app/pages/home/home_page.dart';
-import 'package:web_app/routes/route_names.dart';
+import 'package:web_app/routes/route_helper.dart';
 import 'package:web_app/routes/router.dart';
 import 'package:web_app/service/navigation_service.dart';
 
@@ -12,7 +12,8 @@ import '../../components/navigation_drawer/navigation_drawer.dart';
 import '../../widgets/web_scroll_view.dart';
 
 class LayoutTemplate extends GetView<NavigationService> {
-  const LayoutTemplate({Key? key}) : super(key: key);
+  final Widget? child;
+  const LayoutTemplate({super.key,  this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +30,10 @@ class LayoutTemplate extends GetView<NavigationService> {
                 SizedBox(
                   height: 60,
                 ),
-               Flexible(
-                 fit: FlexFit.loose,
-                 child: Navigator(
-                   key: controller.navigatorKey,
-                   onGenerateRoute: generateRoute,
-                   initialRoute: homeRoute,
-                 ),
+               SizedBox(
+                 width: 800,
+                 height: 500,
+                 child: child!,
                )
               ],
             ),

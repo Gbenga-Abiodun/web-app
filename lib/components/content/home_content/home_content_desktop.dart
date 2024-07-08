@@ -11,9 +11,7 @@ class HomeContentDesktop extends StatelessWidget {
     return Row(
       children: [
         CourseDetails(),
-        Expanded(
-          child: CallToAction(title: "Join Course"),
-        ),
+        CallToAction(title: "Join Course",),
       ],
     );
   }
